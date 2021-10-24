@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Metas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container-login" class="container">
+        Login
+        <hr>
+        Username:<br> <input id = "username-login" placeholder = "Username or Email"><br><br>
+        Password:<br> <input id = "password-login" placeholder = "Password"><br><br>
+        <input type="submit"  onclick = "login()" value = "Login">
+        <div id="message-login"></div>
+    </div>
+    <br><br>
+
+    <div id="container-register" class="container">
+        Register
+        <hr>
+        First Name:<br> <input id = "firstname-register" placeholder = "First Name"><br><br>
+        Last Name:<br> <input id = "lastname-register" placeholder = "Last Name"><br><br>
+        Email:<br> <input id = "email-register" placeholder = "Email"><br><br>
+        Username:<br> <input id = "username-register" placeholder = "Username" onkeyup="checkUsername()"><span id="username-check-register"></span><br><br>
+        Password:<br> <input id = "password-register" placeholder = "Password"><br><br>
+        <button onclick = "register()">Register</button>
+        <div id="message-register"></div>
+    </div>
+    <br><br>
+
+    <div id="container-user" class="container">
+        User Data
+        <hr>
+        <div id="welcome-user">Please Log In</div>
+        <div id="username-user"></div>
+        <div id="points-user"></div>
+        <div id="logout-button-user"></div>
+    </div>
+
+    <br><br>
+    <div id="container-lookup" class="container">
+        User Lookup
+        <hr>
+        <input id = "input-lookup" placeholder="Username" onkeyup="lookupUser()">
+        <div id="results-lookup"></div>
+    </div>
+
+
+    <script src="sha1.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

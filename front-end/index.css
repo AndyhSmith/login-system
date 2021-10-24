@@ -1,0 +1,12 @@
+.container {
+    width: 70%;
+    margin-left: 15%;
+    /* background-color: #c9dcff; */
+    border: rgb(165, 165, 165) 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+hr {
+    width: calc(100% + 18px);
+    margin-left: -10px;
+}

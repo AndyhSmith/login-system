@@ -1,0 +1,41 @@
+create database goals
+
+CREATE TABLE Users (
+    PersonID int NOT NULL AUTO_INCREMENT PRIMARY kEY,
+    UserName VARCHAR(255) NOT NULL,
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    PasswordHashed VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Points int NOT NULL, 
+    DateJoined DATE NOT NULL
+);
+
+INSERT INTO Users (UserName, FirstName, LastName, PasswordHashed, Email, Points, DateJoined) 
+VALUES ('Andystan', 'Andy', 'Smith', '5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8', 'andy.h.smith@gmail.com', 10, '2021-10-25');
+
+CREATE TABLE Token (
+    TokenID int NOT NULL AUTO_INCREMENT PRIMARY kEY,
+    UserName VARCHAR(255) NOT NULL,
+    Token VARCHAR(40) NOT NULL,
+    ValidUntil DATE NOT NULL
+);
+
+INSERT INTO Token (Username, Token, ValidUntil) VALUES ('andystan', '5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8', '2021-10-25');
+
+TRUNCATE TABLE Categories;
+
+CREATE TABLE Goals (
+    GoalID int NOT NULL AUTO_INCREMENT PRIMARY kEY,
+    UserName VARCHAR(255) NOT NULL,
+    Goal VARCHAR(255) NOT NULL,
+    JoinPrice int NOT NULL,
+);
+
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+
+/usr/bin/google-chrome --disable-web-security
